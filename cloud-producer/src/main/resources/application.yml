@@ -1,0 +1,22 @@
+#服务提供者(生产服务)
+server:
+  port: 9000
+spring:
+  application:
+    name: cloud-producer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8081/eureka/      #服务注册中心地址，含有BASIC认证的用户名和密码
+  instance:
+    prefer-ip-address: true         #将IP注册到服务注册中心
+    # 状态页面和健康指标
+#    statusPageUrlPath: ${server.servletPath}/info
+#    healthCheckUrlPath: ${server.servletPat
+
+#放开所有节点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
