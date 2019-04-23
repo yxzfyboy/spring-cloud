@@ -1,5 +1,21 @@
+server:
+  port: 9002
+
 spring:
   application:
     name: config-client
-server:
-  port: 8011
+  cloud:
+    bus:
+      trace:
+        enabled: true # 开启消息跟踪
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest #RabbitMQ默认用户名和密码
+    password: guest
+# 允许/actuator/bus-refresh接口被外部调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

@@ -4,7 +4,7 @@ spring:
     config:
       name: config  #对应{application}部分
       profile: dev  #对应{profile}部分
-      uri: http://localhost:8010/  #配置中心的具体地址
+      uri: http://localhost:8001/  #配置中心的具体地址
       label: master #对应git的分支
       discovery:  #扩展为高可用配置集群
         enabled: true #开启Config服务发现支持
