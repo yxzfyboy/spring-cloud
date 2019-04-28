@@ -1,6 +1,6 @@
 #服务提供者(生产服务)
 server:
-  port: 9000
+  port: 9001
 spring:
   application:
     name: cloud-producer

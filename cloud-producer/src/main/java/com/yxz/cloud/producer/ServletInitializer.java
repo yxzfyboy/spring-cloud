@@ -1,4 +1,4 @@
-package com.yxz.cloud.provider;
+package com.yxz.cloud.producer;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,6 +1,6 @@
-package com.yxz.cloud.provider.controller;
+package com.yxz.cloud.producer.controller;
 
-import com.yxz.cloud.provider.entity.User;
+import com.yxz.cloud.producer.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +24,16 @@ public class UserController {
             findOne.setId(2L);
             findOne.setBalance(2000D);
         }
+
+        //测试负载均衡
+        findOne.setName(findOne.getName() + " 2");
+        System.out.println("request two name is " + findOne.getName());
+        try {
+            Thread.sleep(1000000);
+        } catch (Exception e) {
+            System.out.println("第二次请求错误： " + e.getMessage());
+        }
+
         return findOne;
     }
 }

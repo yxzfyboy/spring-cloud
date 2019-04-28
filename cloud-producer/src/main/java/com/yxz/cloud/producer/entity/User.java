@@ -1,4 +1,4 @@
-package com.yxz.cloud.provider.entity;
+package com.yxz.cloud.producer.entity;
 
 public class User {
 

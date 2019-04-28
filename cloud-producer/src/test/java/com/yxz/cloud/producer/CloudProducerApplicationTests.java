@@ -1,4 +1,4 @@
-package com.yxz.cloud.provider;
+package com.yxz.cloud.producer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
