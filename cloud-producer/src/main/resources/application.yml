@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: cloud-producer
+  zipkin: #指定了Zipkin服务器的地址
+    base-url: http://localhost:7000
+  sleuth:
+    sampler:
+      probability: 1.0  #将采样比例设置为1.0，也就是全部都需要
 eureka:
   client:
     serviceUrl:

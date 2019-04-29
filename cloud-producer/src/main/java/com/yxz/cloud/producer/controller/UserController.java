@@ -26,13 +26,13 @@ public class UserController {
         }
 
         //测试负载均衡
-        findOne.setName(findOne.getName() + " 2");
-        System.out.println("request two name is " + findOne.getName());
-        try {
-            Thread.sleep(1000000);
-        } catch (Exception e) {
-            System.out.println("第二次请求错误： " + e.getMessage());
-        }
+//        findOne.setName(findOne.getName() + " 2");
+//        System.out.println("request two name is " + findOne.getName());
+//        try {
+//            Thread.sleep(1000000);
+//        } catch (Exception e) {
+//            System.out.println("第二次请求错误： " + e.getMessage());
+//        }
 
         return findOne;
     }

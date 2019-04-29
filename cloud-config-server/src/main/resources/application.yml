@@ -4,6 +4,10 @@ spring:
   application:
     name: config-server
   cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true #Tracing Bus Events,2.0版本访问: /actuator/httptrace
     config:
       server:
         git:
@@ -11,11 +15,22 @@ spring:
           search-paths: config-repos # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: yxzfyboy  # git仓库的账号
           password: yxz123371381  # git仓库的密码
-#        native:
-#          search-locations: file:E:/properties/ #指定配置文件的位置
-#  profiles:
-#    active: native  #Spring Cloud Config也提供本地存储配置的方式     #服务注册中心地址，含有BASIC认证的用户名和密码
+  #        native:
+  #          search-locations: file:E:/properties/ #指定配置文件的位置
+  #  profiles:
+  #    active: native  #Spring Cloud Config也提供本地存储配置的方式     #服务注册中心地址，含有BASIC认证的用户名和密码
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     serviceUrl:
       defaultZone: http://admin:123456@localhost:8081/eureka/      #服务注册中心地址，含有BASIC认证的用户名和密码
+# 允许/actuator/bus-refresh接口被外部调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

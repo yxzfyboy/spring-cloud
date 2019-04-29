@@ -26,7 +26,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- 其他版本定义 -->
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <!--<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     </properties>
 
 
@@ -37,6 +38,8 @@
         <module>cloud-turbine</module>
         <module>cloud-config-server</module>
         <module>cloud-config-client</module>
+        <module>cloud-zuul</module>
+        <module>zipkinserver</module>
     </modules>
 
 </project>

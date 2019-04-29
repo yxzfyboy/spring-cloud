@@ -1,6 +1,6 @@
 #服务消费者
 server:
-  port: 9001
+  port: 9101
 spring:
   application:
     name: cloud-consumer
